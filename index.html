@@ -1,0 +1,1169 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta name="google-site-verification" content="6Z0lgk00hHbHEgKl7RoqnpAFGGUcIMBtMjxOsmOJlqw">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>PRIME APIs | AI & Utility API Hub @SELLERPRIMET</title>
+    <meta name="title" content="PRIME APIs| AI & Utility API Hub">
+    <meta name="description" content="Integrate PRIME APIs powerful APIs directly into your applications. High-performance REST APIs for AI Chat, Flux Image Generation, QR Codes, and Social Media Downloaders.">
+    <meta name="keywords" content="AI API, Image Generation API, Flux Model, REST API, Chatbot API, QR Code API, Video Downloader, Developer APIs, PRIME, RGenGPT, Free AI API">
+    <meta name="author" content="PRIME SUMIT">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#030712">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://r-gengpt-api.vercel.app/">
+    <meta property="og:title" content="PRIME APIs| AI & Utility API Hub">
+    <meta property="og:description" content="Integrate PRIME APIs powerful APIs directly into your applications. High-performance REST APIs for AI Chat, Flux Image Generation, QR Codes, and more.">
+    <meta property="og:image" content="/images/ai-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://r-gengpt-api.vercel.app/">
+    <meta property="twitter:title" content="PRIME APIs | Enterprise AI & Utility API Hub">
+    <meta property="twitter:description" content="Integrate PRIME powerful APIs directly into your applications. High-performance REST APIs for AI Chat, Flux Image Generation, QR Codes, and more.">
+    <meta property="twitter:image" content="/images/ai-logo.png">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://r-gengpt-api.vercel.app/">
+    <link rel="icon" type="image/png" href="/images/ai-logo.png">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Custom Config & Tailwind Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#030712', // Ultra dark background
+                            card: '#0f172a', // Slate 900
+                            border: '#1e293b', // Slate 800
+                        },
+                        accent: {
+                            teal: '#0d9488',
+                            purple: '#8b5cf6',
+                            blue: '#3b82f6',
+                            pink: '#ec4899',
+                            telegram: '#0088cc'
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'blob-reverse': 'blob-reverse 15s infinite',
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'border-flow': 'borderFlow 3s linear infinite',
+
+},
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(50px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-40px, 30px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        'blob-reverse': {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(-50px, 50px) scale(1.2)' },
+                            '66%': { transform: 'translate(40px, -30px) scale(0.8)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(15px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        borderFlow: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '100%': { backgroundPosition: '100% 50%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base & Resets */
+        body {
+            background-color: #030712;
+            color: #f8fafc;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Glassmorphism & UI Components */
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-nav {
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.4));
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* Gradient Texts */
+        .text-gradient {
+            background: linear-gradient(to right, #2dd4bf, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .text-gradient-vision {
+            background: linear-gradient(to right, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .text-gradient-multi {
+            background: linear-gradient(to right, #f59e0b, #ef4444, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #030712; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; border: 2px solid #030712; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+
+/* Canvas Background */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* Syntax Highlighting CSS for Code Blocks */
+        .code-block {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+        .syn-keyword { color: #c678dd; } /* const, await, function */
+        .syn-string { color: #98c379; } /* "string" */
+        .syn-func { color: #61afef; } /* fetch, log, then */
+        .syn-var { color: #e5c07b; } /* variables */
+        .syn-comment { color: #6b7280; font-style: italic; } /* // comment */
+        .syn-operator { color: #56b6c2; } /* =, +, => */
+        .syn-number { color: #d19a66; } /* 123 */
+        .syn-tag { color: #e06c75; } /* <html> */
+        .syn-attr { color: #d19a66; } /* src= */
+        
+        .copy-btn {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .code-container:hover .copy-btn {
+            opacity: 1;
+        }
+
+        /* Loaders & Spinners */
+        .loader-dot { animation: loader 1.4s infinite ease-in-out both; }
+        .loader-dot:nth-child(1) { animation-delay: -0.32s; }
+        .loader-dot:nth-child(2) { animation-delay: -0.16s; }
+        
+        @keyframes loader {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255,255,255,0.1);
+            border-top: 3px solid currentColor;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Form Elements styling */
+        .custom-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+        
+        .custom-color-picker::-webkit-color-swatch-wrapper { padding: 0; }
+        .custom-color-picker::-webkit-color-swatch { border: none; border-radius: 6px; }
+
+        /* API Sidebar Active State */
+        .api-nav-btn { transition: all 0.3s ease; }
+        .api-nav-btn.active {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.4);
+            color: #60a5fa;
+            font-weight: 600;
+        }
+        .api-nav-btn:not(.active):hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: #f8fafc;
+        }
+
+        /* Toast Notifications */
+        .toast-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .toast {
+            min-width: 320px;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            transform: translateX(120%);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .toast.show { transform: translateX(0); }
+        .toast-success { border-left: 4px solid #10b981; }
+        .toast-error { border-left: 4px solid #ef4444; }
+        .toast-info { border-left: 4px solid #3b82f6; }
+
+/* Utility Hide */
+        .hidden-element { display: none !important; }
+        
+        /* Interactive Glowing Border Button */
+        .btn-glow {
+            position: relative;
+            background: #0f172a;
+        }
+        .btn-glow::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+            background-size: 300% 100%;
+            z-index: -1;
+            animation: borderFlow 3s linear infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500/30 selection:text-blue-200">
+
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 py-2">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Beautiful Box-Type Logo -->
+<div class="flex items-center gap-3 cursor-pointer px-4 py-2 bg-[#0f172a]/60 hover:bg-[#1e293b]/80 border border-white/10 hover:border-blue-500/30 rounded-2xl backdrop-blur-lg shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] transition-all duration-300 transform hover:-translate-y-0.5 group/logo" onclick="window.scrollTo(0,0)">
+
+    <!-- Boxy Glow Logo -->
+    <div class="relative">
+        <!-- Glow Effect -->
+        <div class="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-xl blur opacity-40 group-hover/logo:opacity-80 group-hover/logo:blur-md transition-all duration-300"></div>
+        
+        <!-- Logo Image (Rounded Box) -->
+        <img src="https://image2url.com/r2/default/images/1774169340510-ca53ba25-d425-4b9f-aac0-27f2f13769ca.jpg" class="w-10 h-10 rounded-xl shadow-xl border border-white/10 object-cover relative z-10 transition-transform duration-300 group-hover/logo:scale-105" alt="PRIME APIs Logo">
+    </div>
+
+    <!-- Logo Text & Subtext -->
+    <div class="flex flex-col justify-center">
+        <span class="font-extrabold text-xl leading-none tracking-tight text-white group-hover/logo:text-blue-50 transition-colors">
+            PRIME<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">APIs</span>
+        </span>
+        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em] mt-1">
+            Enterprise API Hub
+        </span>
+    </div>
+
+</div>
+                
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#features" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Features</a>
+                    <a href="#playground" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Playground</a>
+                    <a href="#all-apis" class="px-4 py-2 text-sm font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-lg transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-server"></i> All APIs
+                    </a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Telegram Bot Button -->
+                    <a href="https://t.me/sellerprimet" target="_blank" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0088cc]/10 text-[#0088cc] border border-[#0088cc]/30 hover:bg-[#0088cc] hover:text-white transition-all text-sm font-bold shadow-[0_0_15px_rgba(0,136,204,0.15)] hover:shadow-[0_0_20px_rgba(0,136,204,0.4)] hover:-translate-y-0.5">
+
+<i class="fa-brands fa-telegram text-lg"></i> Telegram 
+                    </a>
+                    <a href="https://github.com/Tanjid-Islam" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-white/10 transition-all hover:scale-105">
+                        <i class="fa-brands fa-github text-xl"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-300 hover:text-white p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <section class="relative pt-36 pb-24 lg:pt-48 lg:pb-32 px-4 overflow-hidden">
+        <!-- Abstract Background Glows -->
+        <div class="absolute top-10 left-1/4 w-[30rem] h-[30rem] bg-blue-600/10 rounded-full blur-[120px] animate-blob"></div>
+        <div class="absolute bottom-10 right-1/4 w-[30rem] h-[30rem] bg-purple-600/10 rounded-full blur-[120px] animate-blob animate-blob-reverse"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center animate-slide-up">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-semibold uppercase tracking-wider mb-8 shadow-xl">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                API Collection v3.0 is Live
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold text-white mb-6 leading-[1.1] tracking-tight">
+                The Ultimate <br>
+                <span class="text-gradient-multi">Developer API Hub.</span>
+            </h1>
+            <img src="https://image2url.com/r2/default/images/1774169340510-ca53ba25-d425-4b9f-aac0-27f2f13769ca.jpg" alt="image" />
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Empower your applications with PRIME's powerful REST APIs. Generate Text, Images, QR Codes, Fake Identities, and download media seamlessly through lightning-fast endpoints.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#all-apis" class="btn-glow px-8 py-4 rounded-xl text-white font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2 w-full sm:w-auto">
+                    <i class="fa-solid fa-code text-sm"></i> Explore APIs
+                </a>
+                <a href="#playground" class="px-8 py-4 rounded-xl glass-panel text-white font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2 w-full sm:w-auto border border-white/10">
+                    <i class="fa-solid fa-play text-sm"></i> Live Playground
+                </a>
+            </div>
+
+            <!-- Core Statistics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-20 pt-10 border-t border-white/10">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">6+</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Active APIs</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">100<span class="text-blue-400 text-xl">%</span></div>
+                    <div class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Free to Use</div>
+
+</div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">99.9<span class="text-green-400 text-xl">%</span></div>
+                    <div class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Server Uptime</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-1">150<span class="text-purple-400 text-xl">ms</span></div>
+                    <div class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Avg Latency</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All APIs Documentation Section (CORE FEATURE) -->
+    <section id="all-apis" class="py-24 bg-[#050b14] relative border-y border-white/5 shadow-[inset_0_0_100px_rgba(0,0,0,0.8)]">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 text-center md:text-left flex flex-col md:flex-row justify-between items-end gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">API Documentation</h2>
+                    <p class="text-slate-400 text-lg">Everything you need to integrate our services into your code.</p>
+                </div>
+                <a href="https://t.me/sellerprime" target="_blank" class="px-4 py-2 bg-[#0088cc]/10 text-[#0088cc] rounded-lg border border-[#0088cc]/20 text-sm font-semibold hover:bg-[#0088cc] hover:text-white transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-robot"></i> Access via Telegram Bot
+                </a>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- API Navigation Sidebar -->
+                <div class="w-full lg:w-72 flex flex-col gap-2 shrink-0">
+                    <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 pl-2">Available APIs</div>
+                    
+                    <button onclick="switchApiTab('api-chat')" id="nav-api-chat" class="api-nav-btn active text-left px-4 py-3.5 rounded-xl text-sm border border-transparent flex items-center gap-3">
+                        <i class="fa-solid fa-message w-5 text-center"></i> PRIMEGPT Chat AI
+                    </button>
+                    <button onclick="switchApiTab('api-vision')" id="nav-api-vision" class="api-nav-btn text-left px-4 py-3.5 rounded-xl text-sm border border-transparent text-slate-400 flex items-center gap-3">
+                        <i class="fa-solid fa-image w-5 text-center"></i> Flux Image Gen API
+                    </button>
+                    <button onclick="switchApiTab('api-qr')" id="nav-api-qr" class="api-nav-btn text-left px-4 py-3.5 rounded-xl text-sm border border-transparent text-slate-400 flex items-center gap-3">
+                        <i class="fa-solid fa-qrcode w-5 text-center"></i> Advanced QR Code Gen API
+                    </button>
+                    <button onclick="switchApiTab('api-fakeuser')" id="nav-api-fakeuser" class="api-nav-btn text-left px-4 py-3.5 rounded-xl text-sm border border-transparent text-slate-400 flex items-center gap-3">
+                        <i class="fa-solid fa-id-card w-5 text-center"></i> Fake Identity Gen API
+                    </button>
+<button onclick="switchApiTab('api-freefire')" id="nav-api-freefire" class="api-nav-btn text-left px-4 py-3.5 rounded-xl text-sm border border-transparent text-slate-400 flex items-center gap-3">
+    <i class="fa-solid fa-gamepad w-5 text-center"></i> Free Fire Info API
+</button>
+                    <button onclick="switchApiTab('api-video')" id="nav-api-video" class="api-nav-btn text-left px-4 py-3.5 rounded-xl text-sm border border-transparent text-slate-400 flex items-center gap-3">
+
+<i class="fa-solid fa-video w-5 text-center"></i> Video Downloader API
+                    </button>
+                    <button onclick="switchApiTab('api-storage')" id="nav-api-storage" class="api-nav-btn text-left px-4 py-3.5 rounded-xl text-sm border border-transparent text-slate-400 flex items-center gap-3">
+                        <i class="fa-solid fa-cloud-arrow-up w-5 text-center"></i> Cloud Storage
+                    </button>
+                </div>
+
+                <!-- API Content Area -->
+                <div class="flex-1 glass-panel rounded-2xl border border-white/10 overflow-hidden relative min-h-[600px]">
+                    
+                    <!-- ============================================== -->
+                    <!-- 1. CHAT API CONTENT -->
+                    <!-- ============================================== -->
+                    <div id="content-api-chat" class="block">
+                        <div class="p-6 md:p-8 border-b border-white/5 bg-[#0b1121]">
+                            <h3 class="text-2xl font-bold text-white mb-2">PRIMEGPT Chat AI API</h3>
+                            <p class="text-slate-400 text-sm mb-6">High performance text generation API. Conversational AI capable of answering questions, writing code, and logic processing.</p>
+                            
+                            <div class="flex items-center gap-3 bg-black/50 border border-white/10 rounded-lg p-1 pr-4 w-fit">
+                                <span class="px-3 py-1.5 text-xs font-bold bg-green-500/20 text-green-400 rounded-md uppercase tracking-wider">GET</span>
+                                <code class="text-slate-300 font-mono text-sm selection:bg-blue-500/30">https://r-gengpt-api.vercel.app/api/chat</code>
+                                <button onclick="copyText('https://r-gengpt-api.vercel.app/api/chat')" class="ml-2 text-slate-500 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-sliders text-blue-400"></i> Query Parameters</h4>
+                            <div class="overflow-x-auto mb-8">
+                                <table class="w-full text-left text-sm text-slate-400 min-w-[500px]">
+                                    <thead>
+                                        <tr class="text-slate-300 border-b border-white/5 bg-white/5">
+                                            <th class="p-3 rounded-tl-lg">Parameter</th>
+                                            <th class="p-3">Requirement</th>
+                                            <th class="p-3 rounded-tr-lg">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                            <td class="p-3 text-blue-400 font-mono">prompt</td>
+                                            <td class="p-3"><span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs">Required</span></td>
+                                            <td class="p-3">The user's input or question. URL encoded.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-laptop-code text-blue-400"></i> Code Example</h4>
+
+<div class="code-container relative bg-[#0d1117] rounded-xl border border-white/10 overflow-hidden mb-6 group">
+                                <div class="flex items-center justify-between px-4 py-2 bg-black/40 border-b border-white/5">
+                                    <span class="text-xs font-mono text-slate-400">Node.js (Fetch)</span>
+                                    <button onclick="copyCode(this)" class="copy-btn text-xs text-slate-400 hover:text-white flex items-center gap-1"><i class="fa-regular fa-copy"></i> Copy</button>
+                                </div>
+                                <pre class="p-5 overflow-x-auto code-block">
+<span class="syn-keyword">const</span> <span class="syn-var">prompt</span> <span class="syn-operator">=</span> <span class="syn-string">"Hello, who are you?"</span>;
+<span class="syn-keyword">const</span> <span class="syn-var">url</span> <span class="syn-operator">=</span> <span class="syn-string">https://r-gengpt-api.vercel.app/api/chat?prompt=<span class="syn-operator">${</span><span class="syn-func">encodeURIComponent</span>(<span class="syn-var">prompt</span>)<span class="syn-operator">}</span></span>;
+
+<span class="syn-func">fetch</span>(<span class="syn-var">url</span>)
+  .<span class="syn-func">then</span>(<span class="syn-var">response</span> <span class="syn-operator">=&gt;</span> <span class="syn-var">response</span>.<span class="syn-func">text</span>())
+  .<span class="syn-func">then</span>(<span class="syn-var">data</span> <span class="syn-operator">=&gt;</span> <span class="syn-func">console</span>.<span class="syn-func">log</span>(<span class="syn-var">data</span>))
+  .<span class="syn-func">catch</span>(<span class="syn-var">error</span> <span class="syn-operator">=&gt;</span> <span class="syn-func">console</span>.<span class="syn-func">error</span>(<span class="syn-string">'Error:'</span>, <span class="syn-var">error</span>));</pre>
+                            </div>
+                            
+                            <a href="https://r-gengpt-api.vercel.app/api/chat?prompt=Hello" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg transition-colors">
+                                <i class="fa-solid fa-bolt"></i> Test Live API
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ============================================== -->
+                    <!-- 2. VISION API CONTENT (V7.0 UPDATE) -->
+                    <!-- ============================================== -->
+                    <div id="content-api-vision" class="hidden-element">
+                        <div class="p-6 md:p-8 border-b border-white/5 bg-[#0b1121]">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold rounded-full mb-4 uppercase tracking-wider">
+                                <i class="fa-solid fa-rocket"></i> V7.0 Enterprise Model
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Flux Image Generation API</h3>
+                            <p class="text-slate-400 text-sm mb-6">Convert text descriptions into ultra-realistic images. Features dynamic aspect ratios, massive prompt engineering, and strict JSON (JSend) responses.</p>
+                            
+                            <div class="flex items-center gap-3 bg-black/50 border border-white/10 rounded-lg p-1 pr-4 w-fit">
+                                <span class="px-3 py-1.5 text-xs font-bold bg-green-500/20 text-green-400 rounded-md uppercase tracking-wider">GET</span>
+                                <code class="text-slate-300 font-mono text-sm">https://r-gengpt-api.vercel.app/api/image</code>
+
+<button onclick="copyText('https://r-gengpt-api.vercel.app/api/image')" class="ml-2 text-slate-500 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-sliders text-purple-400"></i> Query Parameters</h4>
+                            <div class="overflow-x-auto mb-8">
+                                <table class="w-full text-left text-sm text-slate-400 min-w-[600px]">
+                                    <thead>
+                                        <tr class="text-slate-300 border-b border-white/5 bg-white/5">
+                                            <th class="p-3 rounded-tl-lg">Parameter</th>
+                                            <th class="p-3">Type</th>
+                                            <th class="p-3">Options / Info</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                            <td class="p-3 text-purple-400 font-mono">prompt</td>
+                                            <td class="p-3"><span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs">Required</span></td>
+                                            <td class="p-3 text-xs">Description of the image (e.g., A cyberpunk city).</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                            <td class="p-3 text-purple-400 font-mono">ar</td>
+                                            <td class="p-3 text-slate-500">Optional</td>
+                                            <td class="p-3 font-mono text-xs">1:1, 16:9, 9:16, 4:3, 3:4, 21:9</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                            <td class="p-3 text-purple-400 font-mono">style</td>
+                                            <td class="p-3 text-slate-500">Optional</td>
+                                            <td class="p-3 font-mono text-xs">realistic, anime, cyberpunk, cinematic, none</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-laptop-code text-purple-400"></i> JS Fetch Example</h4>
+                            <div class="code-container relative bg-[#0d1117] rounded-xl border border-white/10 overflow-hidden mb-6 group">
+                                <div class="flex items-center justify-between px-4 py-2 bg-black/40 border-b border-white/5">
+                                    <span class="text-xs font-mono text-slate-400">Fetch API</span>
+                                    <button onclick="copyCode(this)" class="copy-btn text-xs text-slate-400 hover:text-white flex items-center gap-1"><i class="fa-regular fa-copy"></i> Copy</button>
+                                </div>
+                                <pre class="p-5 overflow-x-auto code-block">
+<span class="syn-func">fetch</span>(<span class="syn-string">"https://r-gengpt-api.vercel.app/api/image?prompt=A+beautiful+sunset&amp;style=realistic&amp;ar=16:9"</span>)
+
+.<span class="syn-func">then</span>(<span class="syn-var">res</span> <span class="syn-operator">=&gt;</span> <span class="syn-var">res</span>.<span class="syn-func">json</span>())
+  .<span class="syn-func">then</span>(<span class="syn-var">data</span> <span class="syn-operator">=&gt;</span> {
+      <span class="syn-keyword">if</span>(<span class="syn-var">data</span>.status <span class="syn-operator">===</span> <span class="syn-string">'success'</span>) {
+          <span class="syn-func">console</span>.<span class="syn-func">log</span>(<span class="syn-string">"Image URL:"</span>, <span class="syn-var">data</span>.data.url);
+      }
+  });</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================== -->
+                    <!-- 3. QR CODE API CONTENT -->
+                    <!-- ============================================== -->
+                    <div id="content-api-qr" class="hidden-element">
+                        <div class="p-6 md:p-8 border-b border-white/5 bg-[#0b1121]">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-xs font-bold rounded-full mb-4 uppercase tracking-wider">
+                                <i class="fa-solid fa-star"></i> New Release
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Advanced QR Code API</h3>
+                            <p class="text-slate-400 text-sm mb-6">Generate high-quality, fully customizable QR codes from any text or URL instantly.</p>
+                            
+                            <div class="flex items-center gap-3 bg-black/50 border border-white/10 rounded-lg p-1 pr-4 w-fit">
+                                <span class="px-3 py-1.5 text-xs font-bold bg-green-500/20 text-green-400 rounded-md uppercase tracking-wider">GET</span>
+                                <code class="text-slate-300 font-mono text-sm">https://r-gengpt-api.vercel.app/api/generate-qr</code>
+                                <button onclick="copyText('https://r-gengpt-api.vercel.app/api/generate-qr')" class="ml-2 text-slate-500 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-sliders text-teal-400"></i> Query Parameters</h4>
+                            <div class="overflow-x-auto mb-8">
+                                <table class="w-full text-left text-sm text-slate-400 min-w-[600px]">
+                                    <thead>
+                                        <tr class="text-slate-300 border-b border-white/5 bg-white/5">
+                                            <th class="p-3 rounded-tl-lg">Parameter</th>
+                                            <th class="p-3">Status</th>
+                                            <th class="p-3">Description &amp; Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                            <td class="p-3 text-teal-400 font-mono">data</td>
+                                            <td class="p-3"><span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs">Required</span></td>
+                                            <td class="p-3 text-xs">The URL or text. E.g., <code class="bg-black/30 px-1 rounded">https://google.com</code></td>
+
+</tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                            <td class="p-3 text-teal-400 font-mono">size</td>
+                                            <td class="p-3 text-slate-500">Optional</td>
+                                            <td class="p-3 text-xs">Resolution in pixels. Default: 300. E.g., <code class="bg-black/30 px-1 rounded">500</code></td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                            <td class="p-3 text-teal-400 font-mono">color</td>
+                                            <td class="p-3 text-slate-500">Optional</td>
+                                            <td class="p-3 text-xs">Foreground HEX without #. E.g., <code class="bg-black/30 px-1 rounded">ff0000</code></td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                            <td class="p-3 text-teal-400 font-mono">bg</td>
+                                            <td class="p-3 text-slate-500">Optional</td>
+                                            <td class="p-3 text-xs">Background HEX without #. E.g., <code class="bg-black/30 px-1 rounded">ffffff</code></td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                            <td class="p-3 text-teal-400 font-mono">format</td>
+                                            <td class="p-3 text-slate-500">Optional</td>
+                                            <td class="p-3 text-xs">Image format: <code class="bg-black/30 px-1 rounded">png</code> or <code class="bg-black/30 px-1 rounded">svg</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-laptop-code text-teal-400"></i> cURL Example</h4>
+                            <div class="code-container relative bg-[#0d1117] rounded-xl border border-white/10 overflow-hidden mb-6 group">
+                                <div class="flex items-center justify-between px-4 py-2 bg-black/40 border-b border-white/5">
+                                    <span class="text-xs font-mono text-slate-400">Terminal</span>
+                                    <button onclick="copyCode(this)" class="copy-btn text-xs text-slate-400 hover:text-white flex items-center gap-1"><i class="fa-regular fa-copy"></i> Copy</button>
+                                </div>
+                                <pre class="p-5 overflow-x-auto code-block">
+curl <span class="syn-string">"https://r-gengpt-api.vercel.app/api/generate-qr?data=ADD LINK&amp;size=500&amp;color=0088cc&amp;bg=ffffff"</span> --output qrcode.png</pre>
+                            </div>
+                        </div>
+                    </div>
+
+
+<!-- ============================================== -->
+<!-- 7. FREE FIRE API CONTENT -->
+<!-- ============================================== -->
+<div id="content-api-freefire" class="hidden-element">
+    <div class="p-6 md:p-8 border-b border-white/5 bg-[#0b1121]">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold rounded-full mb-4 uppercase tracking-wider">
+            <i class="fa-solid fa-fire"></i> Enterprise API
+
+</div>
+        <h3 class="text-2xl font-bold text-white mb-2">Free Fire Player Info API</h3>
+        <p class="text-slate-400 text-sm mb-6">Fetch comprehensive real-time player data, stats, guild info, and equipped assets using a player's UID. Features 100% uptime with a dynamic fallback engine.</p>
+        
+        <div class="flex items-center gap-3 bg-black/50 border border-white/10 rounded-lg p-1 pr-4 w-fit">
+            <span class="px-3 py-1.5 text-xs font-bold bg-green-500/20 text-green-400 rounded-md uppercase tracking-wider">GET</span>
+            <code class="text-slate-300 font-mono text-sm">https://r-gengpt-api.vercel.app/api/freefire/info</code>
+            <button onclick="copyText('https://r-gengpt-api.vercel.app/api/freefire/info')" class="ml-2 text-slate-500 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+        </div>
+    </div>
+
+    <div class="p-6 md:p-8">
+        <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-sliders text-orange-400"></i> Query Parameters</h4>
+        <div class="overflow-x-auto mb-8">
+            <table class="w-full text-left text-sm text-slate-400 min-w-[600px]">
+                <thead>
+                    <tr class="text-slate-300 border-b border-white/5 bg-white/5">
+                        <th class="p-3 rounded-tl-lg">Parameter</th>
+                        <th class="p-3">Status</th>
+                        <th class="p-3">Description &amp; Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                        <td class="p-3 text-orange-400 font-mono">uid</td>
+                        <td class="p-3"><span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-xs">Required</span></td>
+                        <td class="p-3 text-xs">The numeric Player ID. E.g., <code class="bg-black/30 px-1 rounded">8008784369</code></td>
+                    </tr>
+                    <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                        <td class="p-3 text-orange-400 font-mono">region</td>
+                        <td class="p-3 text-slate-500">Optional</td>
+                        <td class="p-3 text-xs">Server region (bd, ind, sg, etc.). Default: <code class="bg-black/30 px-1 rounded">bd</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-laptop-code text-orange-400"></i> Code Example</h4>
+        <div class="code-container relative bg-[#0d1117] rounded-xl border border-white/10 overflow-hidden mb-6 group">
+            <div class="flex items-center justify-between px-4 py-2 bg-black/40 border-b border-white/5">
+                <span class="text-xs font-mono text-slate-400">Node.js (Fetch)</span>
+                <button onclick="copyCode(this)" class="copy-btn text-xs text-slate-400 hover:text-white flex items-center gap-1"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+            <pre class="p-5 overflow-x-auto code-block">
+<span class="syn-func">fetch</span>(<span class="syn-string">"https://r-gengpt-api.vercel.app/api/freefire/info?uid=8008784369®ion=bd"</span>)
+.<span class="syn-func">then</span>(<span class="syn-var">res</span> <span class="syn-operator">=&gt;</span> <span class="syn-var">res</span>.<span class="syn-func">json</span>())
+.<span class="syn-func">then</span>(<span class="syn-var">data</span> <span class="syn-operator">=&gt;</span> <span class="syn-func">console</span>.<span class="syn-func">log</span>(<span class="syn-var">data</span>));</pre>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================== -->
+                    <!-- 4. FAKE IDENTITY API CONTENT -->
+                    <!-- ============================================== -->
+                    <div id="content-api-fakeuser" class="hidden-element">
+                        <div class="p-6 md:p-8 border-b border-white/5 bg-[#0b1121]">
+                            <h3 class="text-2xl font-bold text-white mb-2">Fake Identity Generator API</h3>
+                            <p class="text-slate-400 text-sm mb-6">Generates completely random, structured user profiles (Name, Address, Email, Phone, DOB, etc.) for testing and mock data.</p>
+                            
+                            <div class="flex items-center gap-3 bg-black/50 border border-white/10 rounded-lg p-1 pr-4 w-fit">
+                                <span class="px-3 py-1.5 text-xs font-bold bg-green-500/20 text-green-400 rounded-md uppercase tracking-wider">GET</span>
+                                <code class="text-slate-300 font-mono text-sm">https://r-gengpt-api.vercel.app/api/fakeuser/</code>
+                                <button onclick="copyText('https://r-gengpt-api.vercel.app/api/fakeuser/')" class="ml-2 text-slate-500 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-code text-pink-400"></i> JSON Output Structure</h4>
+                            <div class="code-container relative bg-[#0d1117] rounded-xl border border-white/10 overflow-hidden mb-6 group">
+                                <pre class="p-5 overflow-x-auto code-block text-slate-300">
+{
+  <span class="syn-string">"status"</span>: <span class="syn-number">200</span>,
+  <span class="syn-string">"data"</span>: {
+    <span class="syn-string">"name"</span>: <span class="syn-string">"John Doe"</span>,
+    <span class="syn-string">"gender"</span>: <span class="syn-string">"Male"</span>,
+    <span class="syn-string">"email"</span>: <span class="syn-string">"john.doe@example.com"</span>,
+    <span class="syn-string">"phone"</span>: <span class="syn-string">"+1-234-567-8901"</span>,
+    <span class="syn-string">"country"</span>: <span class="syn-string">"United States"</span>,
+    <span class="syn-string">"address"</span>: <span class="syn-string">"123 Mockingbird Ln, NY"</span>,
+    <span class="syn-string">"dob"</span>: <span class="syn-string">"1990-05-14"</span>
+  }
+}</pre>
+                            </div>
+                            <a href="https://r-gengpt-api.vercel.app/api/fakeuser/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-pink-600 hover:bg-pink-500 text-white text-sm font-semibold rounded-lg transition-colors">
+                                <i class="fa-solid fa-bolt"></i> Test Live API
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ============================================== -->
+                    <!-- 5. VIDEO DOWNLOAD API CONTENT -->
+                    <!-- ============================================== -->
+                    <div id="content-api-video" class="hidden-element">
+                        <div class="p-6 md:p-8 border-b border-white/5 bg-[#0b1121]">
+                            <h3 class="text-2xl font-bold text-white mb-2">Social Media Video Downloader API</h3>
+                            <p class="text-slate-400 text-sm mb-6">Extract direct MP4 download links from platforms like YouTube, Facebook, Instagram, TikTok.</p>
+                            
+                            <div class="flex items-center gap-3 bg-black/50 border border-white/10 rounded-lg p-1 pr-4 w-fit">
+
+<span class="px-3 py-1.5 text-xs font-bold bg-green-500/20 text-green-400 rounded-md uppercase tracking-wider">GET</span>
+                                <code class="text-slate-300 font-mono text-sm">https://r-gengpt-api.vercel.app/api/video/download</code>
+                                <button onclick="copyText('https://r-gengpt-api.vercel.app/api/video/download')" class="ml-2 text-slate-500 hover:text-white transition"><i class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-white font-bold text-sm mb-4 border-b border-white/10 pb-2 flex items-center gap-2"><i class="fa-solid fa-sliders text-red-400"></i> Query Parameters</h4>
+                            <table class="w-full text-left text-sm text-slate-400 mb-8">
+                                <thead>
+                                    <tr class="text-slate-300 border-b border-white/5 bg-white/5">
+                                        <th class="p-3">Parameter</th>
+                                        <th class="p-3">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-white/5 hover:bg-white/[0.02]">
+                                        <td class="p-3 text-red-400 font-mono">url</td>
+                                        <td class="p-3 text-xs">The full URL of the social media video. (Required)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4 flex gap-3 mb-6">
+                                <i class="fa-solid fa-info-circle text-yellow-500 mt-1"></i>
+                                <p class="text-sm text-yellow-200/80">Usage Example: Append the video link directly to the parameter. E.g., <code class="bg-black/40 px-1 rounded">?url=https://youtube.com/watch?v=...</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================== -->
+                    <!-- 6. STORAGE API CONTENT -->
+                    <!-- ============================================== -->
+                    <div id="content-api-storage" class="hidden-element">
+                        <div class="p-6 md:p-8 border-b border-white/5 bg-[#0b1121]">
+                            <h3 class="text-2xl font-bold text-white mb-2">Cloud Storage API</h3>
+                            <p class="text-slate-400 text-sm mb-6">Upload small files and receive a direct URL to the stored file. Useful for temporary file hosting.</p>
+                            
+                            <div class="flex items-center gap-3 bg-black/50 border border-white/10 rounded-lg p-1 pr-4 w-fit">
+                                <span class="px-3 py-1.5 text-xs font-bold bg-blue-500/20 text-blue-400 rounded-md uppercase tracking-wider">POST</span>
+                                <code class="text-slate-300 font-mono text-sm">https://r-gengpt-api.vercel.app/api/storage?upload=</code>
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex flex-col items-center justify-center text-center opacity-70 py-16">
+                            <i class="fa-solid fa-lock text-5xl text-slate-500 mb-4"></i>
+                            <h4 class="text-xl font-bold text-white mb-2">Restricted Endpoint</h4>
+                            <p class="text-slate-400 text-sm max-w-sm">This endpoint requires an active Enterprise API Key to prevent abuse. Contact admin to gain upload access.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Interactive Playground Section -->
+    <section id="playground" class="py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Interactive Playground</h2>
+                <p class="text-slate-400">Test the APIs live in your browser before writing any code.</p>
+                
+                <!-- Tab Toggles -->
+                <div class="inline-flex mt-8 bg-white/5 p-1 rounded-xl border border-white/10">
+                    <button id="btn-tab-text" onclick="togglePlayground('text')" class="px-6 py-2.5 rounded-lg text-sm font-semibold bg-blue-500/20 text-blue-400 shadow-sm transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-message"></i> Chat AI
+                    </button>
+                    <button id="btn-tab-vision" onclick="togglePlayground('vision')" class="px-6 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-image"></i> Vision AI
+                    </button>
+<button id="btn-tab-freefire" onclick="togglePlayground('freefire')" class="px-6 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-2">
+    <i class="fa-solid fa-gamepad"></i> Free Fire
+</button>
+                    <button id="btn-tab-qr" onclick="togglePlayground('qr')" class="px-6 py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-qrcode"></i> QR Studio
+                    </button>
+                </div>
+            </div>
+
+            <!-- TEXT PLAYGROUND -->
+            <div id="pg-text" class="flex flex-col md:flex-row gap-6 h-[600px] transition-all">
+                <!-- Chat Interface -->
+                <div class="flex-1 glass-panel rounded-2xl flex flex-col overflow-hidden relative shadow-2xl">
+                    <div class="h-16 border-b border-white/5 flex items-center justify-between px-6 bg-black/40">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_10px_#10b981]"></div>
+                            <span class="font-medium text-white text-sm">PRIME APIs Terminal</span>
+                        </div>
+                        <button onclick="clearTextChat()" class="text-xs font-semibold text-slate-400 hover:text-red-400 transition bg-white/5 px-3 py-1.5 rounded-md">
+                            Clear Chat
+                        </button>
+                    </div>
+
+                    <!-- Messages Area -->
+                    <div id="text-messages" class="flex-1 overflow-y-auto p-6 space-y-6 scroll-smooth bg-[#080c14]">
+                        <!-- AI Welcome Message -->
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-robot text-white text-sm"></i>
+                            </div>
+                            <div class="flex flex-col gap-1 max-w-[85%]">
+                                <span class="text-xs text-slate-400 font-medium ml-1">PRIMEGPT</span>
+                                <div class="bg-white/5 border border-white/10 p-4 rounded-2xl rounded-tl-none text-slate-200 text-sm leading-6">
+                                    Hello! I am connected to the PRIME Chat API. Try asking me a question or tell me to write some code. 🚀
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Input Area -->
+                    <div class="p-4 border-t border-white/5 bg-[#030712]">
+                        <form onsubmit="handleTextSubmit(event)" class="relative flex gap-2">
+                            <input type="text" id="textPromptInput" class="flex-1 bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:bg-white/10 transition-all font-mono text-sm" placeholder="Send a message to API..." autocomplete="off">
+                            <button type="submit" class="w-14 bg-blue-600 hover:bg-blue-500 rounded-xl text-white transition-all flex items-center justify-center shadow-lg shadow-blue-500/20">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISION PLAYGROUND -->
+            <div id="pg-vision" class="hidden-element flex flex-col md:flex-row gap-8 transition-all h-[600px]">
+                <div class="w-full md:w-[380px] glass-panel rounded-2xl p-6 flex flex-col gap-5 overflow-y-auto">
+                    <h3 class="text-slate-300 text-sm font-bold uppercase tracking-widest border-b border-white/10 pb-3"><i class="fa-solid fa-sliders text-purple-400 mr-2"></i>Image Parameters</h3>
+                    
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-2">Prompt</label>
+                        <textarea id="visionPrompt" rows="4" class="w-full bg-black/40 border border-white/10 rounded-xl p-3 text-white text-sm focus:border-purple-500 outline-none resize-none transition-all placeholder-slate-600 font-mono" placeholder="A futuristic cyberpunk city with neon lights..."></textarea>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 mb-2">Style</label>
+                            <select id="visionStyle" class="custom-select w-full bg-black/40 border border-white/10 rounded-xl p-3 text-white text-sm focus:border-purple-500 outline-none">
+                                <option value="realistic">Realistic</option>
+                                <option value="anime">Anime</option>
+                                <option value="cyberpunk" selected>Cyberpunk</option>
+                                <option value="cinematic">Cinematic</option>
+                                <option value="none">Auto</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 mb-2">Aspect Ratio</label>
+                            <select id="visionAR" class="custom-select w-full bg-black/40 border border-white/10 rounded-xl p-3 text-white text-sm focus:border-purple-500 outline-none">
+                                <option value="1:1" selected>1:1 (Square)</option>
+                                <option value="16:9">16:9 (Landscape)</option>
+                                <option value="9:16">9:16 (Portrait)</option>
+                                <option value="21:9">21:9 (Ultrawide)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="btn-generate-img" onclick="handleVisionSubmit()" class="w-full py-4 mt-auto rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Generate API Call
+                    </button>
+                </div>
+
+<div class="flex-1 glass-panel rounded-2xl flex flex-col overflow-hidden bg-[#080c14] relative">
+                    <div class="h-16 border-b border-white/5 flex items-center justify-between px-6 bg-black/40">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-image text-purple-400"></i>
+                            <span class="font-medium text-white text-sm">Output Stream</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Loading State -->
+                    <div id="vision-loading" class="hidden-element absolute inset-0 bg-[#080c14]/80 backdrop-blur flex flex-col items-center justify-center z-10">
+                        <div class="spinner w-10 h-10 border-purple-500 mb-4"></div>
+                        <span class="text-purple-400 font-mono text-sm animate-pulse">Processing via Flux Model...</span>
+                    </div>
+
+                    <div id="vision-output" class="flex-1 p-6 flex items-center justify-center overflow-auto">
+                        <div class="text-slate-500 opacity-50 flex flex-col items-center">
+                            <i class="fa-regular fa-image text-6xl mb-4"></i>
+                            <p>Image will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- FREE FIRE PLAYGROUND -->
+<div id="pg-freefire" class="hidden-element flex flex-col md:flex-row gap-8 transition-all h-[600px]">
+    <div class="w-full md:w-[380px] glass-panel rounded-2xl p-6 flex flex-col gap-5 overflow-y-auto">
+        <h3 class="text-slate-300 text-sm font-bold uppercase tracking-widest border-b border-white/10 pb-3"><i class="fa-solid fa-sliders text-orange-400 mr-2"></i>Player Lookup</h3>
+        
+        <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-2">Player UID</label>
+            <input type="text" id="ffUid" class="w-full bg-black/40 border border-white/10 rounded-xl p-3 text-white text-sm focus:border-orange-500 outline-none transition-all font-mono" placeholder="e.g. 8008784369">
+        </div>
+        
+        <div>
+            <label class="block text-xs font-semibold text-slate-400 mb-2">Region</label>
+            <select id="ffRegion" class="custom-select w-full bg-black/40 border border-white/10 rounded-xl p-3 text-white text-sm focus:border-orange-500 outline-none">
+                <option value="bd" selected>Bangladesh (BD)</option>
+                <option value="ind">India (IND)</option>
+                <option value="sg">Singapore (SG)</option>
+                <option value="us">United States (US)</option>
+                <option value="br">Brazil (BR)</option>
+            </select>
+        </div>
+
+        <button id="btn-generate-ff" onclick="handleFFSubmit()" class="w-full py-4 mt-auto rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-magnifying-glass"></i> Fetch Data
+        </button>
+    </div>
+
+    <div class="flex-1 glass-panel rounded-2xl flex flex-col overflow-hidden bg-[#080c14] relative">
+        <div class="h-16 border-b border-white/5 flex items-center justify-between px-6 bg-black/40">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-database text-orange-400"></i>
+                <span class="font-medium text-white text-sm">JSON Response</span>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="ff-loading" class="hidden-element absolute inset-0 bg-[#080c14]/80 backdrop-blur flex flex-col items-center justify-center z-10">
+            <div class="spinner w-10 h-10 border-orange-500 mb-4"></div>
+            <span class="text-orange-400 font-mono text-sm animate-pulse">Connecting to Enterprise API...</span>
+        </div>
+
+<div class="flex-1 p-4 overflow-auto bg-[#0d1117]">
+            <pre id="ff-output" class="text-xs font-mono text-slate-300 break-all whitespace-pre-wrap"><span class="text-slate-500 opacity-50 flex flex-col items-center justify-center h-full mt-20"><i class="fa-solid fa-code text-6xl mb-4"></i><p>Player JSON data will appear here</p></span></pre>
+        </div>
+    </div>
+</div>
+
+            <!-- QR CODE PLAYGROUND (NEW) -->
+            <div id="pg-qr" class="hidden-element flex flex-col md:flex-row gap-8 transition-all h-[600px]">
+                <div class="w-full md:w-[380px] glass-panel rounded-2xl p-6 flex flex-col gap-5 overflow-y-auto">
+                    <h3 class="text-slate-300 text-sm font-bold uppercase tracking-widest border-b border-white/10 pb-3"><i class="fa-solid fa-sliders text-teal-400 mr-2"></i>QR Configurator</h3>
+                    
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-2">Target URL or Text</label>
+                        <input type="text" id="qrData" class="w-full bg-black/40 border border-white/10 rounded-xl p-3 text-white text-sm focus:border-teal-500 outline-none transition-all font-mono" value="ADD LINK">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 mb-2">QR Color</label>
+                            <div class="flex items-center gap-2 bg-black/40 border border-white/10 rounded-xl p-2 pr-3 focus-within:border-teal-500 transition-all">
+                                <input type="color" id="qrColor" class="custom-color-picker w-8 h-8 rounded bg-transparent cursor-pointer" value="#14b8a6">
+                                <span class="text-xs font-mono text-slate-300 uppercase w-full text-center" id="qrColorHex">14B8A6</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 mb-2">Background</label>
+                            <div class="flex items-center gap-2 bg-black/40 border border-white/10 rounded-xl p-2 pr-3 focus-within:border-teal-500 transition-all">
+                                <input type="color" id="qrBg" class="custom-color-picker w-8 h-8 rounded bg-transparent cursor-pointer" value="#ffffff">
+                                <span class="text-xs font-mono text-slate-300 uppercase w-full text-center" id="qrBgHex">FFFFFF</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 mb-2">Size (px)</label>
+                            <select id="qrSize" class="custom-select w-full bg-black/40 border border-white/10 rounded-xl p-3 text-white text-sm focus:border-teal-500 outline-none">
+                                <option value="200">200x200</option>
+                                <option value="400" selected>400x400</option>
+                                <option value="800">800x800</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 mb-2">Format</label>
+                            <select id="qrFormat" class="custom-select w-full bg-black/40 border border-white/10 rounded-xl p-3 text-white text-sm focus:border-teal-500 outline-none">
+                                <option value="png" selected>PNG Image</option>
+                                <option value="svg">SVG Vector</option>
+                            </select>
+                        </div>
+                    </div>
+
+<button id="btn-generate-qr" onclick="handleQRSubmit()" class="w-full py-4 mt-auto rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold text-sm hover:shadow-[0_0_20px_rgba(20,184,166,0.4)] transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-qrcode"></i> Generate QR
+                    </button>
+                </div>
+
+                <div class="flex-1 glass-panel rounded-2xl flex flex-col overflow-hidden bg-[#080c14] relative">
+                    <div class="h-16 border-b border-white/5 flex items-center justify-between px-6 bg-black/40">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-eye text-teal-400"></i>
+                            <span class="font-medium text-white text-sm">Live Preview</span>
+                        </div>
+                        <button id="qr-download-btn" class="hidden-element text-xs font-semibold bg-teal-500/20 text-teal-400 hover:bg-teal-500 hover:text-white transition px-4 py-2 rounded-lg flex items-center gap-2">
+                            <i class="fa-solid fa-download"></i> Download
+                        </button>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div id="qr-loading" class="hidden-element absolute inset-0 bg-[#080c14]/80 backdrop-blur flex flex-col items-center justify-center z-10">
+                        <div class="spinner w-10 h-10 border-teal-500 mb-4"></div>
+                        <span class="text-teal-400 font-mono text-sm animate-pulse">Encoding Data...</span>
+                    </div>
+
+                    <div class="flex-1 p-6 flex flex-col items-center justify-center overflow-auto pattern-bg">
+                        <style>
+                            .pattern-bg { background-image: radial-gradient(#1e293b 1px, transparent 1px); background-size: 20px 20px; }
+                        </style>
+                        <div id="qr-output" class="bg-white/5 border border-white/10 p-6 rounded-2xl shadow-2xl transition-all duration-500 transform scale-95 opacity-50">
+                            <i class="fa-solid fa-qrcode text-8xl text-slate-600"></i>
+                        </div>
+                        <div id="qr-api-url" class="mt-8 max-w-full overflow-hidden text-ellipsis whitespace-nowrap bg-black/60 border border-white/10 px-4 py-2 rounded font-mono text-[10px] text-slate-500 hidden-element cursor-pointer hover:text-white" onclick="copyCode(this)">
+                            <!-- URL shown here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="border-t border-white/5 bg-[#010308] py-16 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10 relative z-10">
+        
+        <div class="col-span-1 md:col-span-2">
+            
+            <div class="flex items-center gap-3 mb-4">
+                
+                <!-- Logo -->
+                <div class="relative group">
+                    
+                    <!-- Glow -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/30 to-purple-500/30 rounded-full blur-md"></div>
+                    
+                    <img src="https://image2url.com/r2/default/images/1774169340510-ca53ba25-d425-4b9f-aac0-27f2f13769ca.jpg" class="w-10 h-10 rounded-full border border-white/10 object-cover relative z-10" alt="PRIME Logo">
+                         
+                </div>
+
+                <!-- Logo Text -->
+                <span class="font-bold text-white text-2xl tracking-tight">
+                    PRIME<span class="text-blue-400">APIs</span>
+                </span>
+
+</div>
+                <p class="text-slate-500 text-sm mb-6 max-w-sm">Enterprise-grade AI &amp; Utility API hub. Built securely, optimized for speed, designed for the modern developer.</p>
+                <div class="flex gap-3">
+                    <a href="https://t.me/Sellerprimet" target="_blank" class="w-10 h-10 rounded-full bg-[#0088cc]/10 border border-[#0088cc]/30 flex items-center justify-center text-[#0088cc] hover:bg-[#0088cc] hover:text-white transition"><i class="fa-brands fa-telegram text-lg"></i></a>
+                    
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Endpoints</h4>
+                <ul class="space-y-2 text-sm text-slate-500">
+                    <li><a href="#all-apis" onclick="switchApiTab('api-chat')" class="hover:text-blue-400 transition">Chat Generation</a></li>
+                    <li><a href="#all-apis" onclick="switchApiTab('api-vision')" class="hover:text-blue-400 transition">Image Generation</a></li>
+                    <li><a href="#all-apis" onclick="switchApiTab('api-qr')" class="hover:text-blue-400 transition">QR Generator</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Developer</h4>
+                <ul class="space-y-2 text-sm text-slate-500">
+                    <li><i class="fa-solid fa-code text-xs mr-2 text-blue-400"></i> PRIME SUMIT</li>
+                    <li><i class="fa-solid fa-envelope text-xs mr-2 text-blue-400"></i> Developer Contact</li>
+                    <li><i class="fa-solid fa-server text-xs mr-2 text-green-400"></i> Systems Online</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/5 text-center text-sm text-slate-600 relative z-10">
+            © 2026 PRIME AI. Crafted by PRIME SUMIT. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Core Javascript Functions -->
+    <script>
+        // ---------------------------------------------------
+        // 1. UTILITY FUNCTIONS
+        // ---------------------------------------------------
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            
+            let icon = 'fa-check-circle';
+            let colorClass = 'toast-success';
+            let iconColor = 'text-green-400';
+            
+            if (type === 'error') { icon = 'fa-circle-exclamation'; colorClass = 'toast-error'; iconColor = 'text-red-400'; } 
+            else if (type === 'info') { icon = 'fa-info-circle'; colorClass = 'toast-info'; iconColor = 'text-blue-400'; }
+
+            toast.className = toast ${colorClass};
+            toast.innerHTML = <i class="fa-solid ${icon} ${iconColor} text-xl"></i><span class="text-sm font-medium">${message}</span>;
+            
+            container.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 10);
+            setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 400); }, 3000);
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast("Copied to clipboard!", "info");
+            });
+        }
+
+        function copyCode(buttonElement) {
+            const preElement = buttonElement.parentElement.nextElementSibling;
+            const textToCopy = preElement.innerText || preElement.textContent;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = buttonElement.innerHTML;
+                buttonElement.innerHTML = '<i class="fa-solid fa-check text-green-400"></i> Copied';
+                setTimeout(() => { buttonElement.innerHTML = originalText; }, 2000);
+            });
+        }
